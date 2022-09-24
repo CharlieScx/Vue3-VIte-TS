@@ -8,7 +8,15 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
-
+  <!-- flex -->
+  <div class="dad">
+    <div class="son1">
+      123
+    </div>
+    <div class="son2">
+      456
+    </div>
+  </div>
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
@@ -34,5 +42,27 @@ const count = ref(0)
 <style scoped>
 .read-the-docs {
   color: #888;
+}
+.dad{
+  background-color: grey;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.son1 {
+  /* flex:2; */
+  /* width: 200px; */
+  /* height: 100%; */
+  align-self: center;
+  background-color: blue;
+}
+.son2 {
+  flex:1;
+  /* width: 200px; */
+background-color: yellow;
 }
 </style>
